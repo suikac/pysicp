@@ -1,8 +1,8 @@
 # A python implementation on sicp
 
-this repo is going to implement some code in 
+implementation of sicp code in 
 [this course](https://b23.tv/SzpfL3) using purely 
-functional programming in python
+functional programming features(except test) in python
 
 ## Current Progress:
 - [ ] Computation Procedure

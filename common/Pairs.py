@@ -1,3 +1,8 @@
+"""
+Pair implementation
+"""
+
+
 def cons(a, b):
     return lambda x: a if x == 1 else b if x == 2 else None
 
