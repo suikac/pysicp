@@ -1,12 +1,20 @@
 import unittest
+from LineSegment import *
 from RationalNumber import *
 
 
 class MyTestCase(unittest.TestCase):
-    def test_something(self):
+    def test_rat(self):
         rat = make_rat(6, 8)
         self.assertEqual(get_numer(rat), 3)
         self.assertEqual(get_denom(rat), 4)
+
+    def test_line_seg(self):
+        p1 = mak_point(3, 4)
+        p2 = mak_point(7, 1)
+        line1 = mak_seg(p1, p2)
+        print(x_cord(mid_point(line1)), y_cord(mid_point(line1)))
+        self.assertEqual(equal_point(mid_point(line1), mak_point(5, 2.5)), True)
 
 
 if __name__ == '__main__':
