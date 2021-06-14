@@ -1,13 +1,14 @@
 """
 rational number implementation
 """
-from common.Pairs import *
+from common.Pair import *
 from common.Arith import *
 
 
 # a make-rat that simplify when construct
 def make_rat(numer, denom):
-    return cons(numer / gcd(numer, denom), denom / gcd(numer, denom))
+    return cons(numer / gcd(numer, denom),
+                denom / gcd(numer, denom))
 
 
 def get_numer(x):
@@ -17,4 +18,10 @@ def get_numer(x):
 def get_denom(x):
     return cdr(x)
 
+
+def multi_rat(x, y):
+    return make_rat(
+        get_numer(x) * get_denom(y) + get_numer(y) * get_denom(x),
+        get_denom(x) * get_denom(y)
+    )
 

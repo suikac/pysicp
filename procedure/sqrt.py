@@ -1,3 +1,6 @@
+dx = 0.000001  # dx in derivative
+
+
 # return the square root of x
 def sqrt(x):
     return _try_guess(x, 1)
@@ -18,3 +21,11 @@ def _improve(x, y):
 
 def _average(x, y):
     return (x + y) / 2.0
+
+
+def _newton(x, y):
+    pass
+
+
+def derivative(x, y):
+    pass

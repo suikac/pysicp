@@ -6,8 +6,11 @@ from RationalNumber import *
 class MyTestCase(unittest.TestCase):
     def test_rat(self):
         rat = make_rat(6, 8)
+        rat2 = make_rat(8, 10)
         self.assertEqual(get_numer(rat), 3)
         self.assertEqual(get_denom(rat), 4)
+        self.assertEqual(get_numer(multi_rat(rat2, rat)), 31)
+        self.assertEqual(get_denom(multi_rat(rat2, rat)), 20)
 
     def test_line_seg(self):
         p1 = mak_point(3, 4)

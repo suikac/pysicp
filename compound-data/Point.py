@@ -1,4 +1,4 @@
-from common.Pairs import *
+from common.Pair import *
 
 
 def mak_point(x, y):

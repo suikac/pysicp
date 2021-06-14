@@ -1,12 +1,12 @@
-# A python implementation on sicp
+# A python implementation of sicp
 
 Implementation of sicp code in 
 [this course](https://b23.tv/SzpfL3) using purely 
 functional programming features(except test) in python
 
 ## How to build
-Unit Test is included under each package, use virtual environment
-(PyCharm is recommended) to build each module 
+Unit Test is included under each package. Use virtual environment
+(PyCharm is recommended) to run each package 
 
 ## Current Progress:
 - [ ] Procedure
