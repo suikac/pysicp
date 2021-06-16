@@ -14,6 +14,11 @@ class TestPair(unittest.TestCase):
         self.assertEqual(car(a), 3)
         self.assertEqual(cdr(a), 4)
 
+    def test_wired_pair(self):
+        p1 = cons(1, None)
+        p2 = cons(p1, cons(2, None))
+        print(car(car(p2)))
+
 
 class TestArith(unittest.TestCase):
     def test_gcd(self):
@@ -22,11 +27,19 @@ class TestArith(unittest.TestCase):
 
 
 class TestList(unittest.TestCase):
-    def test_list(self):
-        list1 = mak_list()
-        list2 = mak_list()
-        list3 = append(4, list1)
-        self.assertEqual(get(0, list3), 4)
+    def test_mak_list(self):
+        list1 = mak_list(1, 2, 3, 4, 5, 6)
+        self.assertEqual(get(2, list1), 3)
+
+    def test_insert(self):
+        list1 = mak_list(1, 2, 3, 4)
+        list2 = insert(8, list1)
+        self.assertEqual(get(0, list2), 8)
+
+    def test_remove(self):
+        list1 = mak_list(1, 2, 3, 4, 5)
+        list2 = remove(3, list1)
+        self.assertEqual(get(3, list2), 5)
 
 
 if __name__ == '__main__':

@@ -16,9 +16,9 @@ def end_point(x):
 
 # line function based on basic interface
 def mid_point(line):
-    return mak_point(
-        abs(x_cord(end_point(line)) + x_cord(start_point(line))) / 2,
-        abs(y_cord(end_point(line)) + y_cord(start_point(line))) / 2
+    return mak_point()(
+        abs(x_cord()(end_point(line)) + x_cord()(start_point(line))) / 2,
+        abs(y_cord()(end_point(line)) + y_cord()(start_point(line))) / 2
     )
 
 
