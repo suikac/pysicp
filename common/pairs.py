@@ -15,9 +15,5 @@ def cdr(x):
     return x(2)
 
 
-def change_cdr(x, c):
-    return cons(car(x), c)
-
-
 def equal_pair(p1, p2):
     return car(p1) == car(p2) and cdr(p1) == cdr(p2)

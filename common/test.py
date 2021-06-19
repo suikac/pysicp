@@ -3,9 +3,9 @@ Unit Test for common
 """
 
 import unittest
-from Pair import *
-from Arith import *
-from List import *
+from pairs import *
+from arith import *
+from self_list import *
 
 
 class TestPair(unittest.TestCase):
@@ -40,6 +40,12 @@ class TestList(unittest.TestCase):
         list1 = mak_list(1, 2, 3, 4, 5)
         list2 = remove(3, list1)
         self.assertEqual(get(3, list2), 5)
+
+
+    def test_json(self): # try to make a json using list
+        json1 = mak_list(cons(1, mak_list("hello", "I", "am")),
+                         cons("hee", ))
+
 
 
 if __name__ == '__main__':

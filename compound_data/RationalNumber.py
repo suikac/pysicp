@@ -1,8 +1,8 @@
 """
 rational number implementation
 """
-from common.Pair import *
-from common.Arith import *
+from common.pairs import *
+from common.arith import *
 
 
 # a make-rat that simplify when construct

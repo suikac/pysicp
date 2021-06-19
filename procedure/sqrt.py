@@ -1,3 +1,4 @@
+from common import *
 dx = 0.000001  # dx in derivative
 
 
@@ -16,11 +17,7 @@ def _good_enough(x, y):
 
 # improve the guess of sqrt
 def _improve(x, y):
-    return _average(y, x / y)
-
-
-def _average(x, y):
-    return (x + y) / 2.0
+    return avg(y, x / y)
 
 
 def _newton(x, y):

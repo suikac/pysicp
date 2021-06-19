@@ -15,10 +15,10 @@ class TestRat(unittest.TestCase):
 
 class TestLineSeg(unittest.TestCase):
     def test_line_seg(self):
-        p1 = mak_point()(3, 4)
-        p2 = mak_point()(7, 1)
+        p1 = mak_vec()(3, 4)
+        p2 = mak_vec()(7, 1)
         line1 = mak_seg(p1, p2)
-        self.assertEqual(equal_point(mid_point(line1), mak_point()(5, 2.5)), True)
+        self.assertEqual(equal_point(mid_point(line1), mak_vec()(5, 2.5)), True)
 
 
 if __name__ == '__main__':
