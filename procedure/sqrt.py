@@ -1,4 +1,4 @@
-from common import *
+from common.arith import *
 dx = 0.000001  # dx in derivative
 
 
