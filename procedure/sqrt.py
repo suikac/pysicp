@@ -7,12 +7,12 @@ def sqrt(x):
     return _try_guess(x, 1)
 
 
-def _try_guess(x, guess):
-    return guess if _good_enough(x, guess) else _try_guess(x, _improve(x, guess))
+def _try_guess(x, guess):  # use procedure to get abstraction from implementation
+    return guess if _good_enough(x, guess * guess) else _try_guess(x, _improve(x, guess))
 
 
 def _good_enough(x, y):
-    return abs(x - y * y) < 0.001
+    return abs(x - y) < 0.001
 
 
 # improve the guess of sqrt

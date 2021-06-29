@@ -20,6 +20,11 @@ class TestLineSeg(unittest.TestCase):
         line1 = mak_seg(p1, p2)
         self.assertEqual(equal_point(mid_point(line1), mak_vec()(5, 2.5)), True)
 
+    def test_draw_line(self):
+        p1 = mak_vec()(3, 4)
+        p2 = mak_vec()(4, 5)
+        draw_line(p1, p2)
+
 
 if __name__ == '__main__':
     unittest.main()

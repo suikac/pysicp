@@ -22,3 +22,11 @@ def mid_point(line):
     )
 
 
+def vec_to_str(v):
+    return "({}, {})".format(start_point(v), end_point(v))
+
+
+def draw_line(p1, p2):
+    print("a line is drawn between" + vec_to_str(p1) + " " + vec_to_str(p2))
+
+
