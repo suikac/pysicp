@@ -1,5 +1,4 @@
 from common.self_list import *
-from compound_data.Vector import *
 from compound_data.LineSegment import *
 
 
@@ -34,7 +33,7 @@ def for_each(func, coll):
         func(ele)
 
 
-def mak_picture(seg_list):
+def mak_picture(*seg_list):
     return lambda rect: for_each(lambda s: drawline(
         coord_map(rect)(start_point(s)),
         coord_map(rect)(end_point(s))

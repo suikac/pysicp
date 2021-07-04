@@ -1,4 +1,4 @@
-from pairs import *
+from common.pairs import *
 
 
 def mak_list(*args):

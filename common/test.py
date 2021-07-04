@@ -41,11 +41,9 @@ class TestList(unittest.TestCase):
         list2 = remove(3, list1)
         self.assertEqual(get(3, list2), 5)
 
-
     def test_json(self): # try to make a json using list
         json1 = mak_list(cons(1, mak_list("hello", "I", "am")),
-                         cons("hee", ))
-
+                         cons("hee", "4"))
 
 
 if __name__ == '__main__':

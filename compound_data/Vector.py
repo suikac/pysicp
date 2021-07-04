@@ -29,3 +29,11 @@ def scale(s, p):
 
 def equal_point(p1, p2):
     return x_cord()(p1) == x_cord()(p2) and y_cord()(p1) == y_cord()(p2)
+
+
+def vec_to_str(p):
+    return "({}, {})".format(x_cord()(p), y_cord()(p))
+
+
+def drawline(p1, p2):
+    print("a line is drew between {} and {}".format(vec_to_str(p1), vec_to_str(p2)))

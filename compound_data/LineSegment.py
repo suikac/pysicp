@@ -1,9 +1,9 @@
-from Vector import *
+from compound_data.Vector import *
 
 
 # Basic line interface
-def mak_seg(x, y):
-    return cons(x, y)
+def mak_seg(p1, p2):
+    return cons(p1, p2)
 
 
 def start_point(x):
@@ -29,4 +29,7 @@ def vec_to_str(v):
 def draw_line(p1, p2):
     print("a line is drawn between" + vec_to_str(p1) + " " + vec_to_str(p2))
 
+
+if __name__ == '__main__':
+    mak_vec()(1, 2)
 
