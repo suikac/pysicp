@@ -13,16 +13,22 @@ class TestRat(unittest.TestCase):
         self.assertEqual(get_denom(multi_rat(rat2, rat)), 20)
 
 
+p1 = mak_vec(3, 4)
+p2 = mak_vec(7, 1)
+
+
 class TestLineSeg(unittest.TestCase):
+    def test_vec(self):
+        self.assertEqual(x_cord(p1), 3)
+
     def test_line_seg(self):
-        p1 = mak_vec()(3, 4)
-        p2 = mak_vec()(7, 1)
         line1 = mak_seg(p1, p2)
-        self.assertEqual(equal_point(mid_point(line1), mak_vec()(5, 2.5)), True)
+        self.assertEqual(equal_point(mid_point(line1), mak_vec(5, 2.5)), True)
+        self.assertEqual(equal_point(start_point(line1), mak_vec(3, 4)), True)
 
     def test_draw_line(self):
-        p1 = mak_vec()(3, 4)
-        p2 = mak_vec()(4, 5)
+        p1 = mak_vec(3, 4)
+        p2 = mak_vec(4, 5)
         draw_line(p1, p2)
 
 

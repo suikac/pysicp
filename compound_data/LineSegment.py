@@ -16,9 +16,9 @@ def end_point(x):
 
 # line function based on basic interface
 def mid_point(line):
-    return mak_vec()(
-        abs(x_cord()(end_point(line)) + x_cord()(start_point(line))) / 2,
-        abs(y_cord()(end_point(line)) + y_cord()(start_point(line))) / 2
+    return mak_vec(
+        abs(x_cord(end_point(line)) + x_cord(start_point(line))) / 2,
+        abs(y_cord(end_point(line)) + y_cord(start_point(line))) / 2
     )
 
 
@@ -31,5 +31,5 @@ def draw_line(p1, p2):
 
 
 if __name__ == '__main__':
-    mak_vec()(1, 2)
+    mak_vec(1, 2)
 

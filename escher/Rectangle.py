@@ -20,20 +20,20 @@ def get_vert(rect):
 
 def coord_map(rect):  # for each rect, it returns a map for point
     return lambda vector: add_vec(
-        add_vec(scale(x_cord()(vector),
+        add_vec(scale(x_cord(vector),
                 get_horiz(rect)),
-                scale(y_cord()(vector),
+                scale(y_cord(vector),
                 get_vert(rect))),
         get_origin(rect)
     )
 
 
-def for_each(func, coll):
+def for_each(func, coll):  # rather a map function
     for ele in coll:
         func(ele)
 
 
-def mak_picture(*seg_list):
+def mak_picture(seg_list):  # return a procedure that receive a rect and draw
     return lambda rect: for_each(lambda s: drawline(
         coord_map(rect)(start_point(s)),
         coord_map(rect)(end_point(s))
